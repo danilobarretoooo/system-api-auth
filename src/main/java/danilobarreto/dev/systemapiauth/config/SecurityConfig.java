@@ -71,7 +71,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(registry -> {
-                    registry.requestMatchers("api/auth/signup").permitAll();
+                    registry.requestMatchers("/api/auth/signup").permitAll();
                     registry.requestMatchers("/api/auth/**").permitAll();
                     registry.requestMatchers("/api/user/checkUsernameAvailability").permitAll();
                     registry.requestMatchers("/api/user/checkEmailAvailability").permitAll();
